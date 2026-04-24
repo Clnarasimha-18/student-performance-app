@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body style="font-family:Arial; text-align:center;">
+    <body>
+
+<div class="container">
+
+<!-- ALL YOUR CONTENT HERE -->
+
+</div>
+
+</body>
+
+<h2>👤 Student Details</h2>
+
+
+<p>Name: {{student.Name}}</p>
+<p>RollNo: {{student.RollNo}}</p>
+<p>Class: {{student.Class}}</p>
+<p>Section: {{student.Section}}</p>
+<p><b>Gender:</b> {{student.Gender}}</p>
+
+<h3>📚 Courses</h3>
+<ul>
+{% for c in student.Courses %}
+<li>{{c}}</li>
+{% endfor %}
+</ul>
+
+<h2>📊 Academic</h2>
+<p>Attendance: {{student.Attendance}}</p>
+<p>Assignments: {{student.Assignments}}</p>
+<p>Study Hours: {{student.StudyHours}}</p>
+<p>Sem1 CGPA: {{student.Sem1_CGPA}}</p>
+<p>Sem2 CGPA: {{student.Sem2_CGPA}}</p>
+
+<h2>🤖 Prediction (3rd Semester)</h2>
+<p>Result: {{result}}</p>
+<p>Predicted CGPA: {{cgpa}}</p>
+<p>Attendance Status: {{status}}</p>
+<p>Recommended Study: {{study}} hrs/day</p>
+
+</body>
+</html>
